@@ -2,7 +2,6 @@ const transactions = require('express').Router();
 const transactionArray = require('../models/Transaction')
 
 transactions.get('/', (req, res) => {
-    // console.log(res)
     res.json(transactionArray)
 })
 transactions.get("/:id", (req, res) => {

@@ -13,11 +13,12 @@ app.use((req, res, next) => {
 
 
 // ROOT
+app.use('/transactions', transactionsController);
+
 app.get("/", (req, res) => {
   res.send("Welcome To Your Transactions account");
 });
 
-app.use('/transactions', transactionsController);
 
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");
